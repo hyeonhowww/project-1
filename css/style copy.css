@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+}
+
+.popup {
+  position: fixed;
+  width: 440px;
+  height: 250px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 24px;
+  z-index: 99999;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, .5);
+  line-height: 1.75;
+}
+
+button {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
+  top: 170px;
+  z-index: 100000;
+}
+
+/* 수정 */
+.df {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.utils {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* 아이콘 간 간격 */
+  font-size: 25px;
+
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease
+}
+
+.lotteinovate {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 90px;
+  top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+.gnb {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.gnb>li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  justify-content: center;
+  display: flex;
+
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dep2 li {
+  width: 100%;
+  text-align: center;
+}
+
+.dep2 li.title a {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dep2 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 555;
+  transition: height 0.5s;
+}
+
+.gnb:hover .dep2 {
+  height: 500px;
+}
+
+.w100 {
+  transition: height 0.5s;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+}
+
+/* 수정 */
+nav:hover .w100 {
+  height: 35vh;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.business-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.search-area {
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+.search-area input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.news-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card {
+  min-width: 240px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.recruit-section {
+  background: linear-gradient(to top, #e0f7fa, #fff);
+  padding: 60px 20px;
+}
+
+.recruit-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-left: 852px;
+  justify-content: center;
+}
+
+.recruit-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recruit-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+}

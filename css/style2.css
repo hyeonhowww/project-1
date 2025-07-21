@@ -1,0 +1,93 @@
+/* 헤더를 비디오 위에 고정 */
+.main-header {
+  position: absolute;
+  top: 0; left: 0; width: 100%;
+  z-index: 100;
+  background: transparent;
+  padding: 0;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 40px 0 40px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 48px;
+  margin-right: 12px;
+}
+.logo-text {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.gnb {
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gnb > li > a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+.gnb > li > a:hover {
+  color: #ffd600;
+}
+.utils {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 22px;
+  color: #fff;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 0;
+}
+.hero-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+.hero-text h2 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: -2px;
+}
+.hero-text h2 span {
+  color: #ffd600;
+}
+.hero-text p {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 8px;
+}
