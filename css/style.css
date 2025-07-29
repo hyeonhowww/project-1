@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
@@ -16,7 +14,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   font-size: 24px;
-  z-index: 99999;
+  z-index: 99999999999999999;
   left: 50%;
   transform: translateX(-50%);
   top: 100px;
@@ -24,17 +22,18 @@ body {
   line-height: 1.75;
 }
 
-button {
+.close {
   display: block;
   padding: 8px 16px;
   border-radius: 8px;
   position: absolute;
   right: 20px;
   top: 170px;
-  z-index: 100000;
+  z-index: 999999999999999;
 }
 
 /* 수정 */
+
 .df {
   display: flex;
   align-items: center;
@@ -42,26 +41,26 @@ button {
 }
 
 .utils {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 30px;
   /* 아이콘 간 간격 */
   font-size: 25px;
+  color:white;
 
 }
 
 nav {
-  width: 100%;
-  position: relative;
-  z-index: 10;
   background: transparent;
   /* 완전 투명 */
   transition: background 0.3s;
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
 }
 
 .lotteinovate {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
   color: rgb(0, 0, 0);
   position: absolute;
   left: 90px;
@@ -70,8 +69,19 @@ nav {
   font-weight: 600;
 
 }
-.logo{
-  background-color: black
+
+header {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  height: 50px;
+  z-index: 999999999;
+  padding:0 2vw;
+}
+
+header>.df {
+  height: 50px;
 }
 
 .gnb {
@@ -90,12 +100,12 @@ nav {
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .dep2 li {
-  width: 100%;
+  width: calc(100%/5);
   text-align: center;
 }
 
@@ -104,12 +114,18 @@ a {
   font-weight: 600;
   text-align: center;
 }
+.dep2 li:hover .title a {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
 
 .dep2 {
   height: 0;
   overflow: hidden;
   position: relative;
-  z-index: 555;
+  z-index: 55574477;
   transition: height 0.5s;
 }
 
@@ -120,23 +136,22 @@ a {
 .w100 {
   transition: height 0.5s;
   height: 0px;
-  width: 100%;
+  left: 0;
+  right: 0;
   position: absolute;
   top: 50px;
+  z-index: 55555;
 }
 
 /* 수정 */
-nav:hover .w100 {
+.on.w100 {
   height: 35vh;
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 0;
 }
 
 .hero video {
@@ -161,21 +176,58 @@ nav:hover .w100 {
   margin-bottom: 20px;
 }
 
-.business-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-}
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 220px;
+  position: relative;
+  width: 100%;
+  /* max-width: 1000px; */
+  margin: 0 auto;
+
+  overflow: hidden;
+  /* 이미지가 넘치지 않게 */
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: block;
+
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
   padding: 20px;
-  backdrop-filter: blur(8px);
+}
+
+.gray {
+  color: #ccc;
+}
+
+.white-bold {
+  color: white;
+  font-weight: 700;
+}
+
+.bracket {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.text-overlay h1 {
+  font-size: 79px;
+  margin: 0 0 16px;
+  width: 1200px;
+}
+
+.text-overlay p {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .search-area {
@@ -200,9 +252,10 @@ nav:hover .w100 {
   margin: 0 auto 30px;
   padding-bottom: 10px;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
   position: absolute;
-  top: 1250px;
+  top: 3730px;
   right: 435px;
 }
 
@@ -254,7 +307,7 @@ nav:hover .w100 {
   background: #fff;
   color: #333;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
 }
 
@@ -276,12 +329,12 @@ nav:hover .w100 {
   padding: 10px;
   background: #f9f9f9;
 }
+
 .recruit-cards {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: space-between;
   background-image: url(../image/bg-recruit.jpg);
   width: 100vw;
   height: 100vh;
@@ -294,9 +347,10 @@ nav:hover .w100 {
   width: 250px;
   height: 300px;
   text-align: center;
+  transform: translateY(-50%);
   padding: 40px 20px;
   position: relative;
-  
+
   transition: 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);

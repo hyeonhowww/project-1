@@ -1,0 +1,13 @@
+header {
+  position: relative;
+}
+
+nav {
+  position: static;
+}
+
+.w100 {
+  position: absolute;
+  left:0;
+  right:0;
+}
